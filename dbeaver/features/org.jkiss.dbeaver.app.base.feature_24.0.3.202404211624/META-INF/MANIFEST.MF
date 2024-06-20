@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Build-Time: 202404211624
+Built-By: dbeaver.io
+Created-By: dbeaver.io
+
+Name: feature.xml
+SHA-256-Digest: NA0GN7fuYEWD6EhtLMjC9BlLgqLQGqLKZivEJpTagbc=
+
+Name: feature.properties
+SHA-256-Digest: ODkI0/i5XL30Ac5OZ4HcR8Hnoff35vo+YtRilqEBYto=
+

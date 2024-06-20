@@ -1,0 +1,4 @@
+package `class`
+
+class Student {
+}

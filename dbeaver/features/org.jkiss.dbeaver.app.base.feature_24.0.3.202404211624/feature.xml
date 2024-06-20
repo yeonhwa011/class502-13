@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Base for standalone applications. Includes minimum set of plugins -->
+<feature
+        id="org.jkiss.dbeaver.app.base.feature"
+        label="%featureName"
+        version="24.0.3.202404211624"
+        provider-name="%providerName"
+        plugin="org.jkiss.dbeaver.ui.app.standalone">
+
+    <description>
+        %description
+    </description>
+
+    <copyright>
+        %copyright
+    </copyright>
+
+    <license url="%licenseURL">
+        %license
+    </license>
+
+    <url>
+        <update label="DBeaver Universal Database Manager" url="https://dbeaver.io/"/>
+    </url>
+
+    <includes id="org.jkiss.dbeaver.rcp.feature" version="3.0.8.202404211624"/>
+
+    <includes id="org.jkiss.dbeaver.runtime.feature" version="24.0.3.202404211624"/>
+    <includes id="org.jkiss.dbeaver.ui.feature" version="24.0.3.202404211624"/>
+    <includes id="org.jkiss.dbeaver.db.feature" version="1.0.120.202404211624"/>
+    <includes id="org.jkiss.dbeaver.db.ui.feature" version="1.0.120.202404211624"/>
+
+    <!-- Logging -->
+
+    <plugin id="org.jkiss.dbeaver.slf4j" version="2.0.99.202404211624" />
+
+    <!-- Additional plugins for standalone version -->
+
+    <plugin id="org.jkiss.dbeaver.ext.ui.tipoftheday" version="1.0.135.202404211624" />
+
+    <plugin id="org.eclipse.ui.ide.application" version="1.5.200.v20231030-2045" />
+    <plugin id="org.apache.commons.cli" version="1.6.0" />
+    <!-- Launcher -->
+    <plugin id="org.jkiss.dbeaver.launcher" version="1.0.3.202404211624"/>
+    
+
+</feature>

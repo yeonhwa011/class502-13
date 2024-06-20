@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.1
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: JSVG Bundle
+Bundle-SymbolicName: org.jkiss.bundle.jsvg;singleton:=true
+Bundle-Version: 1.3.1
+Bundle-ClassPath: .,lib/jsvg-1.3.0.jar
+Bundle-Vendor: Jannis Weis
+Eclipse-BundleShape: dir
+Export-Package: com.github.weisj.jsvg,com.github.weisj.jsvg.attributes,c
+ om.github.weisj.jsvg.attributes.paint,com.github.weisj.jsvg.geometry.si
+ ze,com.github.weisj.jsvg.nodes,com.github.weisj.jsvg.parser,com.github.
+ weisj.jsvg.parser.css
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.jkiss.dbeaver.db.ui.feature"
+      label="%featureName"
+      version="1.0.120.202404211624"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <includes id="org.jkiss.dbeaver.db.feature" version="1.0.120.202404211624"/>
+
+   <plugin id="org.jkiss.dbeaver.ext.mysql.ui" version="1.0.121.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.dameng.ui" version="1.0.13.202404211624"/>
+   <plugin id="org.jkiss.dbeaver.ext.db2.ui" version="1.0.54.202404211624"/>
+   <plugin id="org.jkiss.dbeaver.ext.exasol.ui" version="1.0.98.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.hana.ui" version="1.0.82.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.mssql.ui" version="1.0.128.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.oracle.ui" version="1.0.116.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.oceanbase.ui" version="1.0.67.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.tidb.ui" version="1.0.9.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.postgresql.ui" version="1.0.105.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.generic.ui" version="1.0.105.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.vertica.ui" version="1.0.120.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.athena.ui" version="1.0.99.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.clickhouse.ui" version="1.0.133.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.bigquery.ui" version="1.0.99.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.spanner.ui" version="1.0.99.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.snowflake.ui" version="1.0.149.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.sqlite.ui" version="1.0.99.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.wmi" os="win32" version="2.0.231.202404211624" />
+   <plugin id="org.jkiss.dbeaver.ext.altibase.ui" version="1.0.0.202404211624" />
+
+</feature>

@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Created-By: 17.0.10 (Private Build)
+
+Name: licenses/poi-license.txt
+SHA-256-Digest: 2N3WQ16uTV599lJI8Zo0f89n4tRU0IJstBijNkji3VQ=
+
+Name: licenses/sshj-license.txt
+SHA-256-Digest: wWwMMjwqcdCt2LBuRkqhzWVMkXk+irI7gfTxx5p8E4M=
+
+Name: .eclipseproduct
+SHA-256-Digest: DAQLvxc6Jc5Ca0FQ21t8TIUYioyf4BREiAJbdwKWLIw=
+
+Name: readme.txt
+SHA-256-Digest: MZmsQ2HuPsFHTesnppVmX8E+auaRelCo2LZpggSdAF0=
+
+Name: licenses/jsch-license.txt
+SHA-256-Digest: hX8l2iiwtYEBLb0zAYHW3qQh7k+POUXtIfbBRitFQEU=
+
+Name: licenses/dbeaver_license.txt
+SHA-256-Digest: 6z17VIVGasvYHytJb1latjfSeS4mggayfZnnk722dUk=
+
+Name: licenses/openai-license.txt
+SHA-256-Digest: pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94=
+
+Name: licenses/gis-license.txt
+SHA-256-Digest: QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6+3YTOl4TecE=
+
+Name: licenses/jsql-license.txt
+SHA-256-Digest: xazLvYVG6Uw0rtJK/miaYXYn0Y7tWmxIJ35I21fCOFE=
+
+Name: licenses/commons_license.txt
+SHA-256-Digest: Pd+b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU=
+
+Name: licenses/eclipse_license.html
+SHA-256-Digest: 2fDhL9PLgG3f2Zpa25LWbe32xzfN5a9+tdgpyF8pr7o=
+

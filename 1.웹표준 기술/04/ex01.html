@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <h1 style="color: orange;">회원가입</h1>
+        <form name="frm" method="post" action="ex02.html" autocomplete="off">
+            <input type="hidden" name="mode" value="join">
+            <fieldset>
+                <legend>일반정보</legend>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            <dl>
+                <dt>아이디</dt>
+                <dd>
+                    <input type="text" name="userId" autofocus placeholder="아이디" 
+                     required minlength="6">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호</dt>
+                <dd>
+                    <input type="password" name="userPw" placeholder="비밀번호"
+                     required minlength="8">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호 확인</dt>
+                <dd>
+                    <input type="password" name="confirPw" placeholder="비밀번호 확인" 
+                    required minlength="8">
+                </dd>
+            </dl>
+            <dl>
+                <dt>회원명</dt>
+                <dd>
+                    <input type="text" name="userNm" value="사용자01" disabled>
+                </dd>
+            </dl>
+            <dl>
+                <dt>이메일</dt>
+                <dd>
+                    <input type="email" namae="email"
+                </dd>
+            </dl>
+            <dl>
+                <dt>생년월일</dt>
+                <input type="month" name="birthDT">
+                <dl>
+                    <dt>프로필 이미지</dt>
+                    <dd>
+                        <input type="file" name="profile" multiple>
+                    </dd>
+                </dl>
+                <dd>
+                    <input type="date" name="birthDT">
+                </dd>
+            </dl>
+            <dl>
+                
+                <dd>
+                    <label><input type="checkbox" name="hobby" value="취미1">취미1</label>
+                    <label><input type="checkbox" name="hobby" value="취미2">취미2</label>
+                    <label> <input type="checkbox" name="hobby"value="취미3"'>취미3</label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>지역</dt>
+                <dd>
+                    <datalist>
+                        <datalist id="location">
+                         <option value="서울택별시" label="서울"></option>
+                         <option value="경기도 " label="경기"></option>
+                          <option value="인천광역시" label="인천"></option>
+                  </datalist>
+
+                    </datalist> 
+                    <input type="text" name="location">
+
+                </dd>
+            </dl>
+            <dl>
+                <dt>자기소개</dt>
+                <dd>
+                    <textarea name="intrduction" rows="10" cols="30"></textarea>
+                </dd>
+            </dl>
+            </fieldset> 
+            <fieldset> 
+                <legend>학교정보 </legend> 
+                <dl>
+                    <dt>전공</dt>
+                    <dd>
+                        <select name="major">
+                            <optgroup label="공과대학">
+                            <option value="컴퓨터공학과">컴퓨터공학과</option>
+                            <option value="기계공학">기계공학과</option>
+                           </optgroup>
+                            
+                         <optgroup label="인문대학">
+                            <option value="영어영문학과" selected>영어영문학과</option>
+                            <option value="철학과">철학과</option>
+                            </optgroup>
+
+
+                        </select>
+                    </dd>
+                </dl>
+            <dl>
+                <dt>학년</dt>
+                <dd>
+                  <input type="radio" name="grade" value="1" checked>
+                  <label for="grade1">1학년</label>
+                  <input type="radio" name="grade" value="2">
+                  <label for="grade2">2학년</label>
+                 <input type="radio" name="grade" value="3">
+                 <label for="grade3">3학년</label>
+                </dd>
+            </dl>
+             </fieldset>
+            <!--
+            <input type="reset" value="다시입력">
+            <input type="submit"value="가입하기">
+            -->
+            <button type="reset">다시입력</button>
+            <button type="submit">가입하기</button>
+        </form>
+
+            <progress max="100" value="70"></progress>
+    </body>
+</html>

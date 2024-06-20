@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.MemberMapper">
+    <resultMap id="memberMap" type="member.Member">
+        <result column="USER_NO" property="userNo" />
+        <result column="USER_ID" property="userId" />
+        <result column="USER_PW" property="userPw" />
+        <result column="USER_NM" property="userNm" />
+        <result column="MOBILE" property="mobile" />
+        <result column="REG_DT" property="regDt" />
+        <result column="MOD_DT" property="modDt" />
+    </resultMap>
+
+    <select id="getList" resultMap="memberMap">
+        SELECT * FROM MEMBER
+    </select>
+
+   <select id="getList3" resultMap="memberMap">
+       <bind name="P_userNm" value="'%' + _parameter.getUserNm() +'%'"/>
+       <bind name="P_mobile" value="'%' + _parameter.getMobile()+ '%'" />
+       SELECT * FROM MEMBER
+      <where>
+       <if test="userId !=null">
+             USER_ID = #{userId}
+       </if>
+       <if test="userNm !=null">
+           AND USER_NM LIKE #{P_userNm}
+       </if>
+       <if test="mobile !=null">
+           AND MOBILE LIKE #{P_mobile}
+       </if>
+      </where>
+   </select>
+
+    <select id="getList4" resultMap="memberMap">
+        SELECT * FROM MEMBER
+        <where>
+            <foreach item ="item" index="index" collection="list"
+            open="USER_ID IN(" close=")" separator=",">
+                #{item}
+
+            </foreach>
+        </where>
+    </select>
+
+    <insert id="register">
+        INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, MOBILE)
+        VALUES (SEQ_MEMBER.NEXTVAL, #{userId}, #{userPw}, #{userNm}, #{mobile})
+    </insert>
+
+    <insert id="register2">
+        <selectKey keyProperty="userNo" order="BEFORE" resultType="long">
+            SELECT SEQ_MEMBER.NEXTVAL FROM DUAL
+        </selectKey>
+
+        INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, MOBILE)
+        VALUES (#{userNo}, #{userId}, #{userPw}, #{userNm}, #{mobile})
+    </insert>
+
+    <update id="modify">
+        UPDATE MEMBER
+        <trim prefix="SET" suffixOverrides=","></trim>
+
+        <if test ="userPw !=">
+         USER_PW = #{userPw},
+        </if>
+        <if test="userNm ! =null">
+            USER_NM = #{userNm},
+        </if>
+        <if test="mobile !=null">
+        MOBILE = #{mobile},
+        </if>
+        MOD_DT = SYSDATE
+        WHERE USER_ID = #{userId}
+    </update>
+    <delete id="delete">
+        DELETE FROM MEMBER WHERE USER_ID = #{userId}
+    </delete>
+</mapper>

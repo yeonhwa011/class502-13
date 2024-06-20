@@ -1,0 +1,18 @@
+.wrapper{
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.highlight {
+    color: orange;
+    font-weight: bold;
+}
+.menus{
+    background: gray;
+}
+:global .commonColor {
+    color:blue;
+}

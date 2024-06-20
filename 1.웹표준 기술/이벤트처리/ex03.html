@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charest="UTF-8">
+    </head>
+    <body>
+        <style>
+            .box {
+                padding: 100px;
+            }
+            .box1{
+                background-color: gray;
+            }
+            .box2{
+                background-color: green;
+            }
+            .box3{
+                background-color: orange;
+            }
+        </style>
+        <script>
+            window.addEventListener("DOMContentLoaded",function(){
+               const box1 =document.querySelector(".box1");
+               const box2 =document.querySelector(".box2");
+               const box3 =document.querySelector(".box3");
+
+               box1.addEventListener("click",function(){
+                console.log("BOX1");
+               });
+
+               box2.addEventListener("click",function(){
+                console.log("BOX2");
+               }, true);
+
+               box3.addEventListener("click",function(e) {
+                e.stopEventListener();//이벤트 취소
+                console.log("BOX3");
+               });
+            });
+        </script>
+        <div class="box box1">Box1
+        <div class="box box2">BOX2
+        <div class="box box3">BOX3
+              </div>
+           </div>
+        </div>
+    </body>
+</html>
