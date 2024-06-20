@@ -20,6 +20,7 @@ import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.mock;
 
 @ExtendWith(MockitoExtension.class)
 @DisplayName("로그인 기능 테스트")
@@ -38,7 +39,7 @@ public class LoginServiceTest {
         loginService = MemberServiceProvider.getInstance().loginService();
         JoinService joinService = MemberServiceProvider.getInstance().joinService();
         faker = new Faker(Locale.ENGLISH);
-        dbSession= memberExistTes
+        dbSession= MemberServiceProvider.getInstance().getSession();
 
         // 회원 가입 -> 가입한 회원 정보로 email, password 스텁 생성
         form = RequestJoin.builder()
@@ -105,6 +106,22 @@ public class LoginServiceTest {
        BadRequestException thrown = assertThrows(BadRequestException.class,()->{
            loginService.process(request);
        });
+
+       String message =thrown.getMessage();
+       assertTrue(message.contains("이메일 또는 비밀번호"));
+    }
+
+    @Test
+    @DisplayName("비밀번호 검증,검증 실패시 BadRequestException")
+    void passwordCheckTest(){
+        setParam("password","***" + form.getPassword());
+        BadRequestException thrown = assertThrows(BadRequestException.class,()->{
+            loginService.process(request);
+
+        });
+
+        String message = thrown.getMessage();
+        assertTrue(message.equals("이메일 또는 비밀번호"));
     }
 
     @AfterEach
