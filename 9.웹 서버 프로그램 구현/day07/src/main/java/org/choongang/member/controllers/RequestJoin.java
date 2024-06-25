@@ -12,4 +12,3 @@ public class RequestJoin {
     private String userName;
     private boolean termsAgree;
 }
-

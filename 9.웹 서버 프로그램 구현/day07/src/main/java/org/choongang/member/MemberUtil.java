@@ -6,13 +6,14 @@ import org.choongang.member.entities.Member;
 
 public class MemberUtil {
 
-    public static boolean isLogin(HttpServletRequest request){
+    public static boolean isLogin(HttpServletRequest request) {
 
         return getMember(request) != null;
     }
-    public static Member getMember(HttpServletRequest request){
+
+    public static Member getMember(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        Member member = (Member) session.getAttribute("member");
+        Member member = (Member)session.getAttribute("member");
 
         return member;
     }
