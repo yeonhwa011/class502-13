@@ -34,7 +34,7 @@ public class ApiMemberController {
     public ResponseEntity join(@RequestBody @Valid RequestJoin form, Errors errors) {
         if (errors.hasErrors()) {
             throw new BadRequestException(utils.getErrorMessages(errors));
-        }
+        }   //command객체에 대한 검증
    /*
         boolean result = false;
         if (!result) {
