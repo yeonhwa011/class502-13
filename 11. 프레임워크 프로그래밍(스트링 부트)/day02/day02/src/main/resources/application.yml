@@ -22,6 +22,7 @@ spring:
       ddlAuto: create
 
 
+
 # 로거 설정
 logging:
   level:
