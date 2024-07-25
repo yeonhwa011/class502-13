@@ -1,35 +1,49 @@
 package org.choongang.member.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import lombok.*;
+import org.choongang.board.entities.BoardData;
+import org.choongang.global.entities.BaseEntity;
+import org.choongang.member.constants.Authority;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
+@Builder
 @Data
 @Entity
-//@Table(name="CH_MEMBER")
-/*@Table(indexes ={
-        @Index(name="idx_created_at_desc",columnList = "createdAt DESC"),
-        @Index(name="uq_email_password",columnList = "email,password",unique = true)
-})
- */
-
-public class Member {
-    @Id @GeneratedValue
+@NoArgsConstructor @AllArgsConstructor
+//@Table(name="CH_MEMBER") // 테이블 이름이 클래스명과 다른 경우
+/*
+@Table(indexes = {
+        @Index(name="idx_created_at_desc", columnList = "createdAt DESC"),
+        @Index(name="uq_email_passsword", columnList = "email, password", unique = true)
+})*/
+public class Member extends BaseEntity {
+    @Id /* @GeneratedValue(strategy = GenerationType.AUTO) */ @GeneratedValue
     private Long seq;
+
+    @Column(length=60, nullable = false, unique = true)
     private String email;
+
+    @Column(length=65, nullable = false)
     private String password;
+
+    @Column(length=40, nullable = false, name="name")
     private String userName;
 
-    @Lob
+    // @Lob
+    @Transient
     private String introduction;
 
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+    @Column(length=10)
+    @Enumerated(EnumType.STRING)
+    private Authority authority;
 
-    @UpdateTimestamp
-    private LocalDateTime modifiedAt;
+    @OneToOne
+    @JoinColumn(name="profileSeq")
+    private MemberProfile profile;
+
+    @ToString.Exclude // ToString 추가 배제
+    @OneToMany(mappedBy = "member")
+    private List<BoardData> items;
 }
